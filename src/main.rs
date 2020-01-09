@@ -10,13 +10,17 @@ struct Files {
 
 impl Files {
     fn get(args: &[String]) -> Result<Files, &'static str> {
-        if args.len() != 3 {
-            return Err("Exactly 3 args needed");
+        let file1;
+        let file2;
+        if args.len() == 2 {
+            file1 = args[1].clone();
+            file2 = args[1].clone();
+        } else if args.len() == 3 {
+            file1 = args[1].clone();
+            file2 = args[2].clone();
+        } else {
+            return Err("Usage: file1 [file2]")
         }
-
-        let file1 = args[1].clone();
-        let file2 = args[2].clone();
-
         Ok(Files { file1, file2 })
     }
 }
