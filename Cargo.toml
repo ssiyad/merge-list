@@ -1,0 +1,5 @@
+[package]
+name = "merge-list"
+version = "0.1.0"
+authors = ["Sabu Siyad <ssiyad@tuta.io>"]
+edition = "2018"
