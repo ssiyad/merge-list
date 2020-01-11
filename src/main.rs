@@ -49,6 +49,7 @@ fn get_out(lis: Vec<String>) -> String {
         output.push_str(&line);
         output.push_str("\n");
     }
+    output.truncate(output.len() - 1);
     output
 }
 
